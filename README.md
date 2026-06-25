@@ -1,6 +1,6 @@
 # MedRecord — Recordatorio de Medicamentos 
 
-Aplicacion Android nativa en Kotlin que ayuda a los pacientes a recordar tomar sus medicamentos en el horario correcto.
+Aplicacion Android nativa en Java que ayuda a los pacientes a recordar tomar sus medicamentos en el horario correcto.
 
 ## Descripcion del problema
 
@@ -22,7 +22,7 @@ Desarrollar una aplicacion Android que permita registrar medicamentos con nombre
 
 ## Tecnologia usada
 
-- **Lenguaje:** Kotlin
+- **Lenguaje:** Java
 - **Framework:** Android nativo (Jetpack)
 - **Base de datos:** Room (SQLite local)
 - **Arquitectura:** MVVM (Model-View-ViewModel)
