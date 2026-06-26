@@ -65,6 +65,20 @@ Desarrollar una aplicacion Android que permita registrar medicamentos con nombre
 - [ ] Implementar sistema de notificaciones con AlarmManager
 - [ ] Crear pantalla de historial de tomas
 
+## Funcionalidades implementadas
+
+- [x] Registro de usuario con validacion de campos
+- [x] Login con correo y contraseña
+- [x] Hash de contraseñas con SHA-256
+- [x] Persistencia de sesion con SharedPreferences
+- [x] Base de datos local con SQLiteOpenHelper
+- [x] Validacion de formato de correo con Patterns.EMAIL_ADDRESS
+- [ ] Pantalla de lista de medicamentos (proxima entrega)
+- [ ] Sistema de notificaciones (proxima entrega)
+
+### Lenguaje
+Java — Android nativo
+
 ## Autor
 
 Abigail Zambrano — Universidad Central del Ecuador  
