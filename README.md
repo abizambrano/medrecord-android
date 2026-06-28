@@ -76,6 +76,39 @@ Desarrollar una aplicacion Android que permita registrar medicamentos con nombre
 - [ ] Pantalla de lista de medicamentos (proxima entrega)
 - [ ] Sistema de notificaciones (proxima entrega)
 
+## Arquitectura de datos
+ 
+MainActivity (UI) → UserDatabaseHelper → SQLite (medrecord.db)
+                                       ↑
+           AgregarMedicamentoActivity (formulario CREATE/UPDATE)
+ 
+### Tablas
+- `usuarios`: autenticacion (id, nombre, correo, contrasena_hash)
+- `medicamentos`: CRUD principal (id, nombre, descripcion, dosis_mg, unidad, id_usuario)
+ 
+### Notificaciones
+AlarmManager + BroadcastReceiver (AlarmReceiver) + NotificationHelper
+Canal: medrecord_recordatorios | Hora: 8:00 AM diario
+ 
+### Como probar el CRUD
+1. Iniciar sesion con una cuenta registrada
+2. Tocar el boton + para agregar un medicamento
+3. Rellenar nombre, dosis y unidad → Guardar
+4. El medicamento aparece en la lista
+5. Tocar un item para editarlo
+6. Mantener presionado un item para eliminarlo (con confirmacion)
+ 
+## Funcionalidades implementadas
+- [x] CRUD completo de medicamentos (Create, Read, Update, Delete)
+- [x] RecyclerView con MedicamentoAdapter
+- [x] Formulario unificado para crear y editar
+- [x] AlertDialog de confirmacion antes de eliminar
+- [x] Snackbar con opcion Deshacer
+- [x] Notificaciones locales con AlarmManager
+- [x] Canal de notificaciones (API 26+)
+- [x] Permiso POST_NOTIFICATIONS (Android 13+)
+
+
 ### Lenguaje
 Java — Android nativo
 
